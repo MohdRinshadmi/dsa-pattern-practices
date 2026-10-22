@@ -57,3 +57,15 @@ Newest session at the bottom. Totals are counted from [tracker/blind75-tracker.c
 - Cross-checked: 137 IDs across the two trackers match learning-order.md, and the CSV has 97 unique LeetCode numbers.
 - **Totals (from the CSV):** 97 problems (98 rows): Not Started 98 rows, Solved 0, Mastered 0. No revisions due.
 - **Next:** unchanged. The learner answers F1-warmup Part 2, then F2 (Big-O).
+
+## 2026-10-22, Session 2 (continued): Interview Master 100 added
+
+- **The learner asked to add the Interview Master 100 problems (<https://instabyte.io/p/interview-master-100>, published 2024-06-27) that were not already in the project.**
+- Crawled the page: 100 unique LeetCode problems. 57 were already in the main list. 7 were only in the optional supplementary list (S03, S04, S07, S11, S15, S19, S30), and 36 were new.
+- Added all **43** as **P099-P141** (`Sheet_Tab` = "Interview Master 100"), so the main list covers all 100. All 43 were checked against LeetCode's API (all exist, all free). All 39 solution links on the page responded. They are stored in the new `IM100_Solution_URL` column and treated as spoilers.
+- Added the columns `IM100_No` and `IM100_Solution_URL` to the tracker. The 57 existing matches got their IM100 number (P043 and P074 both = IM100 #75).
+- Each new problem was placed in the phase that teaches its technique. For example, Sort List comes after Merge Sort, Course Schedule II next to topological sort, and Maximum Sum Circular Subarray after Maximum Subarray. **Lessons are now L001-L145.** Phase 18 is now "Bit Manipulation & Math" (folder `18-bit-manipulation-math`).
+- Updated the trackers, learning-order.md (regenerated), README, CLAUDE.md and supplementary-roadmap.md (7 more rows point to the main list), plus the DSA Master README and CLAUDE.md. Removed hard-coded lesson numbers from the prose so later renumbering can't make them stale.
+- Cross-checked: 180 IDs across both trackers match learning-order.md. There are 140 unique LeetCode numbers, and IM100 coverage is 100/100.
+- **Totals (from the CSV):** 140 problems (141 rows): Not Started 141 rows, Solved 0, Mastered 0. No revisions due.
+- **Next:** unchanged. The learner answers F1-warmup Part 2, then F2 (Big-O).

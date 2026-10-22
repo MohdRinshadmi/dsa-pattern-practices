@@ -1,6 +1,15 @@
-# DSA Mastery: 97 problems (Blind 75 + DSA Master)
+# DSA Mastery: 140 problems (Blind 75 + DSA Master + Interview Master 100)
 
-**The main problem list has 97 problems:** the 75 from the Blind 75 sheet (P001-P076, 76 rows, because one problem appears twice) plus the 22 LeetCode problems that test the [DSA Master](../dsa-master/README.md) build lessons (P077-P098). Everything below about "the sheet" describes the Blind 75 sheet itself.
+**The main problem list has 140 problems (141 rows):**
+
+| IDs | Source | Problems |
+|---|---|---|
+| P001-P076 | Blind 75 sheet (76 rows, because one problem appears twice) | 75 |
+| P077-P098 | LeetCode checks for the [DSA Master](../dsa-master/README.md) build lessons | 22 |
+| P099-P141 | [Interview Master 100](https://instabyte.io/p/interview-master-100) problems not already in the list | 43 |
+| | **Total** | **140** |
+
+All 100 Interview Master problems are covered: 57 were already in the list, and the tracker's `IM100_No` column shows each one's number on that page. The 43 new ones were checked against LeetCode's API on 2026-10-22, and all are free. Everything below about "the sheet" describes the Blind 75 sheet itself.
 
 Source: Google Sheet "Copy of Blind 75 WeCode", tab "Blind 75". The share link is private (HTTP 401), so the sheet was received as a PDF export on 2026-10-21. Every LeetCode link was checked against LeetCode's own API and every video link against YouTube on the same day.
 
@@ -8,8 +17,8 @@ Source: Google Sheet "Copy of Blind 75 WeCode", tab "Blind 75". The share link i
 
 | File | Purpose |
 |---|---|
-| [tracker/blind75-tracker.csv](tracker/blind75-tracker.csv) | Master problem tracker: all 97 problems in 98 rows. P001-P076 are the sheet entries; P077-P098 are the DSA Master check problems (`Sheet_Tab` = "DSA Master check"). Live status. Opens in Excel or Google Sheets. The file keeps its original name. |
-| [tracker/learning-order.md](tracker/learning-order.md) | The combined study order L001-L102 (97 problems + 39 DSA Master items), grouped into phases 00-18. |
+| [tracker/blind75-tracker.csv](tracker/blind75-tracker.csv) | Master problem tracker: all 140 problems in 141 rows. P001-P076 are the sheet entries; P077-P098 are the DSA Master checks (`Sheet_Tab` = "DSA Master check"); P099-P141 are from Interview Master 100 (`Sheet_Tab` = "Interview Master 100"). Live status. Opens in Excel or Google Sheets. The file keeps its original name. |
+| [tracker/learning-order.md](tracker/learning-order.md) | The combined study order L001-L145 (140 problems + 39 DSA Master items), grouped into phases 00-18. |
 | [supplementary-roadmap.md](supplementary-roadmap.md) | Extra problems and topics that are not in the sheet. Optional, tracked separately. |
 | [progress-log.md](progress-log.md) | A checkpoint at the end of every session, including the next problem. |
 | [CLAUDE.md](CLAUDE.md) | Mentor instructions, loaded automatically, so a new session can resume with "Continue DSA". |
@@ -68,30 +77,30 @@ Source: Google Sheet "Copy of Blind 75 WeCode", tab "Blind 75". The share link i
 
 The P-IDs follow the original sheet order. The study order is rearranged so that every problem's prerequisites come first. Strict sheet order would put DP (#16-26) before recursion and trees, and it would reach Merge K Sorted Lists (#43, which needs a heap) long before the Heap section (#74-76). No sheet entry is dropped. The full table is in [tracker/learning-order.md](tracker/learning-order.md).
 
-Since 2026-10-22, the learning order also includes the [DSA Master](../dsa-master/README.md) track (M01-M39), where you build each data structure and algorithm from scratch. Every lesson of both tracks has one number, **L001-L102**. Each build lesson sits at the start of the phase that uses it. Two phases were added: 08 Recursion & Sorting and 16 Union-Find & Greedy, so the phase numbers after 07 moved.
+Since 2026-10-22, the learning order also includes the [DSA Master](../dsa-master/README.md) track (M01-M39), where you build each data structure and algorithm from scratch. Every lesson has one number, **L001-L145** (Interview Master 100 problems were added on the same day). Each build lesson sits at the start of the phase that uses it. Two phases were added: 08 Recursion & Sorting and 16 Union-Find & Greedy, so the phase numbers after 07 moved.
 
 | Phase | Lessons | Problems (in study order) | DSA Master builds |
 |---|---|---|---|
 | 00 Foundations | F1-F5 | none | M10-M12 (inside F5) |
-| 01 Arrays & Hashing | L001-L006 | P003, P053, P001, P054, P031, P059 | |
-| 02 Prefix & Suffix | L007 | P004 | |
-| 03 Two Pointers | L008-L011 | P077, P056, P009, P010 | M04 (with P077) |
-| 04 Sliding Window | L012-L016 | P078, P002, P050, P051, P052 | M05 (with P078) |
-| 05 Stack & Queue | L017-L019 | P055 | M15, M16 |
-| 06 Binary Search | L020-L022 | P079, P007, P008 | M03 (with P079) |
-| 07 Matrix | L023-L025 | P048, P047, P046 | |
-| 08 Recursion & Sorting | L026-L028 | P080 | M30, M02 (with P080), M01 |
-| 09 Linked List | L029-L035 | P081, P082, P040, P041, P042, P044, P045 | M06 (with P081), M07 (with P082), M08 (with P040), M09 (with P041) |
-| 10 Trees | L036-L048 | P083, P084, P085, P086, P060, P062, P061, P066, P064, P070, P068, P069, P067, P063, P065 | M13 + M31 (with P083-P085), M14 (with P086) |
-| 11 Heap / Priority Queue | L049-L054 | P075, P087, P043, P074, P076 | M17, M18, M19 (with P075, P087) |
-| 12 Backtracking | L055-L059 | P088, P021, P049, P089, P090 | M39 (with P088) before; M38 (with P089), M37 (with P090) after |
-| 13 Trie | L060-L063 | P071, P091, P072, P073 | M24 + M25 (with P071), M26 (with P091) |
-| 14 Intervals | L064-L068 | P038, P036, P035, P037, P039 | |
-| 15 Graphs | L069-L078 | P092, P028, P093, P030, P027, P029, P034, P033, P032 | M20 (with P092), M21 + M32, M23 (with P028), M22 (with P093) |
-| 16 Union-Find & Greedy | L079-L081 | P094, P095, P096 | M27 + M28 (with P094), M29 (with P095), M36 (with P096) |
-| 17 Dynamic Programming | L082-L097 | P097, P098, P016, P022, P023, P005, P006, P017, P024, P020, P018, P026, P025, P019, P057, P058 | M33 (with P097), M34 (with P098), M35 (with P019) |
-| 18 Bit Manipulation | L098-L102 | P012, P014, P015, P013, P011 | |
-| **Total** | **102 lessons** | **98 rows = 97 unique problems** | **39 items** |
+| 01 Arrays & Hashing | L001-L008 | P003, P053, P099, P001, P054, P100, P031, P059 |  |
+| 02 Prefix & Suffix | L009 | P004 |  |
+| 03 Two Pointers | L010-L019 | P077, P056, P101, P102, P103, P104, P009, P010, P105, P106 | M04 (with P077) |
+| 04 Sliding Window | L020-L024 | P078, P002, P050, P051, P052 | M05 (with P078) |
+| 05 Stack & Queue | L025-L029 | P055, P107, P108 | M15, M16 |
+| 06 Binary Search | L030-L036 | P079, P109, P110, P111, P007, P008, P112 | M03 (with P079) |
+| 07 Matrix | L037-L040 | P048, P047, P046, P113 |  |
+| 08 Recursion & Sorting | L041-L044 | P114, P080 | M30, M02 (with P080), M01 |
+| 09 Linked List | L045-L055 | P081, P082, P040, P041, P042, P044, P045, P115, P116, P117, P118 | M06 (with P081), M07 (with P082), M08 (with P040), M09 (with P041) |
+| 10 Trees | L056-L077 | P083, P084, P085, P086, P060, P062, P061, P119, P066, P120, P121, P064, P122, P123, P124, P070, P068, P125, P069, P067, P126, P127, P063, P065 | M13 + M31 (with P083, P084, P085), M14 (with P086) |
+| 11 Heap / Priority Queue | L078-L083 | P075, P087, P043, P074, P076 | M17, M18, M19 (with P075, P087) |
+| 12 Backtracking | L084-L091 | P088, P128, P021, P129, P130, P049, P089, P090 | M39 (with P088), M38 (with P089), M37 (with P090) |
+| 13 Trie | L092-L095 | P071, P091, P072, P073 | M24 + M25 (with P071), M26 (with P091) |
+| 14 Intervals | L096-L100 | P038, P036, P035, P037, P039 |  |
+| 15 Graphs | L101-L113 | P092, P028, P093, P030, P131, P027, P029, P034, P033, P132, P133, P032 | M20 (with P092), M21 + M32, M23 (with P028), M22 (with P093) |
+| 16 Union-Find & Greedy | L114-L117 | P094, P095, P096, P134 | M27 + M28 (with P094), M29 (with P095), M36 (with P096) |
+| 17 Dynamic Programming | L118-L136 | P097, P098, P016, P022, P023, P005, P006, P135, P017, P024, P020, P018, P026, P025, P136, P137, P019, P057, P058 | M33 (with P097), M34 (with P098), M35 (with P019) |
+| 18 Bit Manipulation & Math | L137-L145 | P012, P138, P014, P015, P013, P139, P011, P140, P141 |  |
+| **Total** | **145 lessons** | **141 rows = 140 unique problems** | **39 items** |
 
 ## Status values (tracker "Status" column)
 
